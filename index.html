@@ -132,6 +132,11 @@
         
         /* Mobile Responsive Styles */
         @media (max-width: 768px) { 
+            nav {
+                display: flex;
+                width: 100%;
+                justify-content: space-around;
+            }
             body { 
                 flex-direction: column; 
                 height: 100vh;
@@ -166,13 +171,25 @@
                 border-radius: 50%;
                 transition: all 0.3s ease;
             }
-            
+            .nav-item[data-page="policies"] {
+                order: 1;
+            }
+            .nav-item[data-page="analysis"] {
+                order: 2;
+            }
+            .nav-item[data-page="financials"] {
+                order: 4;
+            }
+            .nav-item[data-page="vault"] {
+                order: 5;
+            }
             .nav-item[data-page="chat"] {
                 transform: scale(1.2);
                 background-color: var(--primary-color);
                 color: white;
                 box-shadow: 0 4px 15px rgba(46, 92, 255, 0.3);
                 z-index: 2;
+                order: 3;
             }
             
             .nav-item[data-page="chat"]:hover {
